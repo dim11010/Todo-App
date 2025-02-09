@@ -39,8 +39,9 @@ export default {
 
             console.warn(result);
             if(result.status==201){
-                alert("Signed Up Successfully!");
+                //alert("Signed Up Successfully!");
                 localStorage.setItem("user-info",JSON.stringify(result.data))
+                this.$router.push({name:'home'})
             }
         }
     }
