@@ -6,8 +6,9 @@
         <input type="text" v-model="Mname" placeholder="Middle Name"  id="Mname" name="Mname">
         <input type="text" v-model="Lname" placeholder="Last Name"  id="Lname" name="Lname">
         <input type="email" v-model="Email" placeholder="Email"  id="Email" name="Email">
-        <input type="password" v-model="Password" placeholder="Password"  id="Lname" name="Passwprd">
+        <input type="password" v-model="Password" placeholder="Password"  id="Password" name="Password">
         <button v-on:click="signUp" type="submit" name="submit">Sign Up</button>
+        <p> Already have an account? <router-link to="/login"> Login</router-link></p>
     </div>
 </template>
 <script>
@@ -25,7 +26,7 @@ export default {
             Password: ''
         }
     },
-    methods:{
+    methods:{   
         async signUp()
         {
            // console.warn("signup", this.Fname, this.Mname, this.Lname, this.Email, this.Password)
@@ -41,37 +42,16 @@ export default {
             if(result.status==201){
                 //alert("Signed Up Successfully!");
                 localStorage.setItem("user-info",JSON.stringify(result.data))
-                this.$router.push({name:'home'})
+                this.$router.push({name:'login'})
             }
         }
+    },
+    mounted(){
+        //after signing up, it will go directly to login page.
+        //let users = localStorage.getItem('user-info');
+       // if(users){
+        //    this.$router.push({name:'login'})
+       // }
     }
 }
 </script>
-
-<style>
-    .logo{
-        width: 100px;
-        height: 100px;
-    }
-        
-    .signup input{
-        width: 300px;
-        height: 40px;
-        padding-left: 20px;
-        display: block;
-        margin-bottom: 10px;
-        margin-right: auto;
-        margin-left: auto;
-        border: 1px solid #21AB91;
-
-    }
-
-    .signup button{
-        width: 325px;
-        height: 40px;
-        border: 1px solid #21AB91;
-        background-color: #21AB91;
-        color: #fff;
-        cursor: pointer;
-    }
-</style>
