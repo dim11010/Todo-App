@@ -48,10 +48,11 @@ export default {
     },
     mounted(){
         //after signing up, it will go directly to login page.
-        //let users = localStorage.getItem('user-info');
-       // if(users){
-        //    this.$router.push({name:'login'})
-       // }
+        let users = localStorage.getItem('user-info');
+        if(users){
+        this.$router.push({name:'login'})
+        
+        }
     }
 }
 </script>
