@@ -50,8 +50,4 @@ body{
         cursor: pointer;
     }
 
-.nav{
-  background-color: #333;
-  overflow:hidden;
-}
 </style>

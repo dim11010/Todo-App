@@ -3,13 +3,13 @@
         <a href="#">Home</a>
         <a href="#">Add Todo</a>
         <a href="#">Update Todo</a>
-        <a v-onclick="logout" href="#">Logout</a>
+        <a v-on:click="logout" href="#">Logout</a>
     </div>
 </template>
 <script>
 export default {
     name:'Header',
-    medthods:{
+    methods: {
         //ayaw gumana nito!
         logout(){
             localStorage.clear();

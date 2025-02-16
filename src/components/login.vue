@@ -16,7 +16,7 @@
         id="Password"
         name="Password"
       />
-      <button @click="login" type="submit" name="submit">Login</button>
+      <button v-on:click="login" type="submit" name="submit">Login</button>
       <p>
         Do you want to create an account?
         <router-link to="/signup">Sign Up</router-link>
