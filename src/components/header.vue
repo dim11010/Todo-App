@@ -10,7 +10,6 @@
 export default {
     name:'Header',
     methods: {
-        //ayaw gumana nito!
         logout(){
             localStorage.clear();
             this.$router.push({name:'login'});
