@@ -29,7 +29,7 @@ body{
         height: 100px;
     }
       
-.login input, .signup input{
+.login input, .signup input, .add input{
         width: 300px;
         height: 40px;
         padding-left: 20px;
@@ -41,7 +41,7 @@ body{
 
     }
 
-.login button, .signup button{
+.login button, .signup button, .add button{
         width: 325px;
         height: 40px;
         border: 1px solid #21AB91;

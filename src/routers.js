@@ -13,22 +13,22 @@ const routes = [
     {
         name:'SignUp',
         component:SignUp,
-        path:'/signup'
+        path:'/signup',
     },
     {
         name:'login',
         component:login,
-        path:'/login'
+        path:'/login',
     },
     {
         name:'add',
         component:add,
-        path:'/add'
+        path:'/add',
     },
     {
         name:'update',
         component:update,
-        path:'/update'
+        path:'/update/:id',
     }
 ];
 
